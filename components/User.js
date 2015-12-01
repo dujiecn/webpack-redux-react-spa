@@ -6,8 +6,6 @@ import * as UserAction from '../actions/User';
 
 class User extends Component {
 	render() {
-		console.log(1)
-
 		return (
 			<div>this is User Component!</div>
 		)
