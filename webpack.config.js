@@ -12,6 +12,9 @@ module.exports = {
         filename: 'bundle.js'
     },
     plugins: [
+        new webpack.DefinePlugin({
+            __DEV__: false
+        }),
         new webpack.optimize.CommonsChunkPlugin('common.js'),
         new webpack.optimize.UglifyJsPlugin(),
         new webpack.optimize.OccurenceOrderPlugin(), // OccurenceOrderPlugin，它会按引用频度来排序 ID，以便达到减少文件大小的效果
