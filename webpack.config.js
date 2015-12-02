@@ -7,7 +7,7 @@ module.exports = {
         './router'
     ],
     output: {
-        publicPath: '/',
+        publicPath: 'http://localhost:8080/',
         path: path.join(__dirname, 'dist'),
         filename: 'bundle.js'
     },
