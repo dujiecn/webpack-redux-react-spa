@@ -14,6 +14,10 @@ app.use(webpackDevMiddleware(compiler, {
 }));
 app.use(webpackHotMiddleware(compiler));
 
+// app.get('*',function(req,res) {
+// 	res.append('Access-Control-Allow-Origin','*');
+// });
+
 app.get("/", function(req, res) {
 	res.sendFile(__dirname + '/views/index.html');
 })
