@@ -17,7 +17,7 @@ var config = {
 		new webpack.optimize.UglifyJsPlugin(),
 		new webpack.optimize.OccurenceOrderPlugin(), // OccurenceOrderPlugin，它会按引用频度来排序 ID，以便达到减少文件大小的效果
 		new webpack.HotModuleReplacementPlugin(),
-		new webpack.NoErrorsPlugin(), // 用来跳过编译时出错的代码并记录，使编译后运行时的包不会发生错误
+		new webpack.NoErrorsPlugin() // 用来跳过编译时出错的代码并记录，使编译后运行时的包不会发生错误
 	],
 	module: {
 		loaders: [{
