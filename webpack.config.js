@@ -4,8 +4,6 @@ var path = require('path');
 var config = {
 	devtool: 'cheap-module-eval-source-map',
 	entry: [
-		'webpack-hot-middleware/client?timeout=6000&reload=true',
-		'webpack/hot/only-dev-server',
 		'./router'
 	],
 	output: {  

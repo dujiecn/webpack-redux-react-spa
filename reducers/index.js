@@ -4,4 +4,3 @@ import User from './User'
 export default combineReducers({
 	User
 });
-
