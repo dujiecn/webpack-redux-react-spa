@@ -21,12 +21,8 @@ var config = {
 	module: {
 		loaders: [{
 			test: /\.jsx?$/,
-			loader: 'babel',
-			exclude: /node_modules/,
-			query: {
-				presets: ['react', 'es2015'],
-				plugins: ['transform-runtime']
-			}
+			loaders: ['react-hot','babel?presets[]=react,presets[]=es2015,plugins[]=transform-runtime'],
+			exclude: /node_modules/
 		}, {
 			test: /\.(less|css)?$/,
 			loader: 'style!css!less',
