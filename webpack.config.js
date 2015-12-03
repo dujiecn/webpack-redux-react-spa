@@ -14,7 +14,7 @@ var config = {
     plugins: [
         new webpack.DefinePlugin(settings),
         new webpack.optimize.CommonsChunkPlugin('common.js'),
-        // new webpack.optimize.UglifyJsPlugin(),
+        new webpack.optimize.UglifyJsPlugin(),
         new webpack.optimize.OccurenceOrderPlugin(), // OccurenceOrderPlugin，它会按引用频度来排序 ID，以便达到减少文件大小的效果
         // new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin() // 用来跳过编译时出错的代码并记录，使编译后运行时的包不会发生错误
@@ -37,7 +37,7 @@ var config = {
 
 if (settings.__DEV__) {
     config.devtool = 'cheap-module-eval-source-map';
-    config.plugins.push(new webpack.optimize.UglifyJsPlugin(), new webpack.HotModuleReplacementPlugin());
+    config.plugins.push(new webpack.HotModuleReplacementPlugin());
 }
 
 module.exports = config;

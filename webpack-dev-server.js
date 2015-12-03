@@ -10,23 +10,28 @@ var options = {
     publicPath: webpackConfig.output.publicPath,
     headers: {
         "Access-Control-Allow-Origin": "*"
+    },
+    stats: {
+        colors: true
     }
 };
 
 if (settings.__DEV__) {
-    for(entryName in webpackConfig.entry) {
-        webpackConfig.entry[entryName].unshift('webpack-dev-server/client?http://localhost:' + port, 'webpack/hot/dev-server');    
+    for (entryName in webpackConfig.entry) {
+        webpackConfig.entry[entryName].unshift('webpack-dev-server/client?http://localhost:' + port, 'webpack/hot/dev-server');
     }
-    
-    options.hot = true;
-    options.noInfo = true;
-    options.watchOptions = {
-        aggregateTimeout: 300,
-        poll: 1000
-    };
+
+    Object.assign(options, {
+        hot: true,
+        noInfo: false,
+        watchOptions: {
+            aggregateTimeout: 300,
+            poll: 1000
+        }
+    });
 }
 
 var compiler = webpack(webpackConfig);
 var server = new webpackDevServer(compiler, options).listen(port, "localhost", function() {
-    console.info("==> 🌍 Listening on port %s. Open up http://localhost:%s/ in your browser.", port, port);
+    console.info("==> 🌍  Listening on port %s. Open up http://localhost:%s/ in your browser.", port, port);
 });
