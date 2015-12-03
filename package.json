@@ -4,8 +4,8 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "node server.js",
-    "start2": "node webpack-dev-server.js"
+    "start2": "node server.js",
+    "start": "node webpack-dev-server.js"
   },
   "author": "",
   "license": "ISC",
