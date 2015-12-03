@@ -10,6 +10,6 @@ node app.js
 
 
 
-npm start-middleware
+npm run start-middleware
 npm start 开发使用
-npm build 生产使用
+npm run build 生产使用
