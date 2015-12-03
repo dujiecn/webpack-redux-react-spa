@@ -5,7 +5,7 @@ var webpackHotMiddleware = require('webpack-hot-middleware');
 var webpackConfig = require('./webpack.config');
 
 var app = new(express)();
-var port = 8080;
+var port = 3000;
 
 webpackConfig.entry.unshift('webpack-hot-middleware/client?timeout=6000&reload=true','webpack/hot/only-dev-server');
 var compiler = webpack(webpackConfig);
