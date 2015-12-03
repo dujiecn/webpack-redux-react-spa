@@ -1,10 +1,9 @@
 var webpack = require('webpack');
 var webpackDevServer = require('webpack-dev-server');
 var webpackConfig = require('./webpack.config');
-var host = 'localhost';
-var port = 8080;
+var port = 3000;
 
-webpackConfig.entry.unshift('webpack-dev-server/client?http://' + host + ':' + port, 'webpack/hot/dev-server');
+webpackConfig.entry.unshift('webpack-dev-server/client?http://localhost:' + port, 'webpack/hot/dev-server');
 var compiler = webpack(webpackConfig);
 var server = new webpackDevServer(compiler, {
     hot: true,
@@ -17,6 +16,6 @@ var server = new webpackDevServer(compiler, {
     headers: {
         "Access-Control-Allow-Origin": "*"
     }
-}).listen(port, host, function() {
+}).listen(port, 'localhost', function() {
     console.info("==> 🌍 Listening on port %s. Open up http://localhost:%s/ in your browser.", port, port);
 });
