@@ -1,15 +1,17 @@
 #争取做到前端最佳实践
 
-node server.js
-	基于webpack-dev-middleware和webpack-hot-middleware中间件,依赖express模块
-    server.js在双服务的情况下，热部署存在问题。需要主动刷新页面才生效
-node webpack-dev-server.js
-	基于webpack-dev-server服务器，不依赖express模块
-node app.js
-    模拟后端服务器，结合node webpack-dev-server.js实现双服务热部署
+
+server.js
+    基于webpack-dev-middleware和webpack-hot-middleware中间件,依赖express模块
+    在双服务的情况下，热部署存在问题。需要主动刷新页面才生效
+webpack-dev-server.js 
+    基于webpack-dev-server服务器，不依赖express模块，双服务可以实现热部署
+settings.js
+    全局配置，通过解析命令行参数区分环境。
+    
+启动方式见package.json里面的scripts属性    
 
 
 
-npm run start-middleware
-npm start 开发使用
-npm run build 生产使用
+
+

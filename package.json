@@ -4,9 +4,8 @@
     "description": "",
     "main": "webpack.config.js",
     "scripts": {
-        "start-middleware": "node server.js",
         "start": "node webpack-dev-server.js dev",
-        "build": "node webpack-dev-server.js pro"
+        "build":"webpack -p"
     },
     "author": "",
     "license": "ISC",

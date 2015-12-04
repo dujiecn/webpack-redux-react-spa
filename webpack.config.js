@@ -7,7 +7,7 @@ var config = {
         index:["./router/index.js"]
     },
     output: {
-        publicPath: 'http://localhost:3000/',
+        publicPath: 'http://localhost:3000/dist',
         path: path.join(__dirname, 'dist'),
         filename: '[name].bundle.js'
     },
