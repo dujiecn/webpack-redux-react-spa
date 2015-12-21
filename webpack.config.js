@@ -25,7 +25,7 @@ var config = {
             loaders: ['react-hot', 'babel?presets[]=react,presets[]=es2015,plugins[]=transform-runtime'],
             exclude: /node_modules/
         }, {
-            test: /\.(less|css)?$/,
+            test: /\.(less|css)$/,
             loader: 'style!css!less',
             exclude: /node_modules/,
         }]
