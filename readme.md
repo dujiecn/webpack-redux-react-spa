@@ -1,5 +1,3 @@
-#争取做到前端最佳实践
-
 
 server.js
     基于webpack-dev-middleware和webpack-hot-middleware中间件,依赖express模块
